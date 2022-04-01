@@ -20,4 +20,14 @@ function ju_enqueue() {
     wp_enqueue_style('ju_magnific_popup');
     wp_enqueue_style('ju_responsive');
     wp_enqueue_style('ju_custom');
+
+    // Last 3 parameters of wp_register_script('ju_plugins', $uri . '/assets/js/plugins.js', array(), null, true);
+    // ensure JS being loaded has no dependencies, doesn't have a query string version number, is loaded just
+    // before closing <body> tag
+    wp_register_script('ju_plugins', $uri . '/assets/js/plugins.js', array(), null, true);
+    wp_register_script('ju_functions', $uri . '/assets/js/functions.js', array(), null, true);
+
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('ju_plugins');
+    wp_enqueue_script('ju_functions');
 }
