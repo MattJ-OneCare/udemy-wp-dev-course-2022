@@ -1,4 +1,6 @@
 <?php
+// Hooks
+add_action( 'wp_enqueue_scripts', 'ju_enqueue' );
 function ju_enqueue() {
     $uri = get_theme_file_uri();
 
