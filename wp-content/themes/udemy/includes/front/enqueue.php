@@ -31,3 +31,10 @@ function ju_enqueue() {
     wp_enqueue_script('ju_plugins');
     wp_enqueue_script('ju_functions');
 }
+
+// function admin_scipts_styles() {
+//     $uri = get_theme_file_uri();
+
+//     wp_enqueue_script('ju_functions', $uri . '/assets/js/functions.js', array(), null);
+// }
+// add_action('admin_enqueue_scripts', 'admin_scipts_styles');
