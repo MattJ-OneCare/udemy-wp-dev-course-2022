@@ -8,8 +8,6 @@ define( 'THEMEPATH', get_template_directory() );
 include( THEMEPATH . "/includes/front/enqueue.php" );
 include( THEMEPATH . "/includes/custom-nav-walker.php" );
 include( THEMEPATH . "/includes/setup.php" );
-
-
-
+include( THEMEPATH . "/includes/widgets.php" );
 
 // Shortcodes
