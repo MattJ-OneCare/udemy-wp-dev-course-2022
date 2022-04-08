@@ -106,9 +106,9 @@
         ============================================= -->
         <nav id="primary-menu" class="style-2">
 
-          <!-- <div class="container clearfix"> -->
+          <div class="container clearfix">
 
-            <!-- <div id="primary-menu-trigger"><i class="icon-reorder"></i></div> -->
+            <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
 
             <?php
             if( has_nav_menu('primary') ) {
@@ -117,6 +117,7 @@
                 'container'         => false,
                 'fallback_cb'       => false,
                 'depth'             => 4,
+                'walker'            => new JU_Custom_Nav_Walker()
               ));
             }
             ?>
