@@ -7,6 +7,7 @@
                 dynamic_sidebar('ju_sidebar');
             }
             ?>
+
         </div>
 
       </div><!-- .sidebar end -->
