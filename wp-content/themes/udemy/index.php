@@ -34,18 +34,10 @@
       ============================================= -->
       <div class="postcontent nobottommargin clearfix">
 
-        <!-- Posts
-        ============================================= -->
-        <div id="posts">
-          <?php
-          if( have_posts() ):
-            while( have_posts() ): the_post();
-              get_template_part('partials/post/content-excerpt');
-            endwhile;
-          endif;
-          ?>
-        </div><!-- #posts end -->
-
+      <?php
+      get_template_part('partials/post/content-excerpt');
+      ?>
+      
         <!-- Pagination
         ============================================= -->
         <div class="row mb-3">

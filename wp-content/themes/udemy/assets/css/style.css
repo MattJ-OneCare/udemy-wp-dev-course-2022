@@ -123,6 +123,10 @@ dl, dt, dd, ol, ul, li {
 	overflow:hidden;
 }
 
+.clearfix {
+    display: flow-root;
+}
+
 ::selection {
 	background: #1ABC9C;
 	color: #FFF;
