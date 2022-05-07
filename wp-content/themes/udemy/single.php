@@ -15,6 +15,7 @@
             while( have_posts() ): the_post();
                 global $post;
                 $author_ID = $post->post_author;
+                $author_NAME = get_the_author_meta( 'nickname', $author_ID );
                 $author_URL = get_author_posts_url( $author_ID );
         ?>
   <div class="single-post nobottommargin">
@@ -100,20 +101,16 @@
   <div class="card-header">
     <strong>
       Posted by
-      <a href="#">John Doe</a>
+      <a href="<?php echo $author_URL; ?>"><?php the_author(); ?></a>
     </strong>
   </div>
   <div class="card-body">
     <div class="author-image">
-      <img src="images/author/1.jpg" class="rounded-circle">
+      <?php echo get_avatar( $author_ID, 90, '', $author_NAME, array(
+        'class' => 'img-circle'
+      ) ); ?>
     </div>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-    Dolores, eveniet, eligendi et nobis neque minus mollitia sit
-    repudiandae ad repellendus recusandae blanditiis praesentium v
-    itae ab sint earum voluptate velit beatae alias fugit
-    accusantium laboriosam nisi reiciendis deleniti tenetur
-    molestiae maxime id quaerat consequatur fugiat aliquam
-    laborum nam aliquid. Consectetur, perferendis?
+    <?php echo nl2br(get_the_author_meta( 'description' )); ?>
   </div>
 </div><!-- Post Single - Author End -->
 
